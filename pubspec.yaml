@@ -1,0 +1,58 @@
+name: health_app
+description: Medico — Doctor Patient Health App
+
+publish_to: "none"
+
+version: 2.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # HTTP & Auth
+  dio: ^5.4.3
+  flutter_secure_storage: ^9.2.2
+
+  # UI
+  cupertino_icons: ^1.0.2
+  google_fonts: ^6.2.1
+  google_nav_bar: ^5.0.6
+  carousel_slider: ^5.0.0
+  shimmer: ^3.0.0
+  lottie: ^3.1.0
+  fl_chart: ^0.68.0
+
+  # Utilities
+  image_picker: ^1.1.2
+  intl: ^0.19.0
+  url_launcher: ^6.3.0
+  shared_preferences: ^2.3.1
+  introduction_screen: ^3.1.14
+
+dependency_overrides:
+  # Newer versions with namespace support for AGP 8+
+  flutter_plugin_android_lifecycle: ^2.0.22
+  path_provider_android: ">=2.2.4 <2.3.0"
+  image_picker_android: ^0.8.9
+  url_launcher_android: ^6.3.0
+  # file 6.1.2 is incompatible with current Dart SDK (missing 'exclusive' param)
+  file: ^7.0.0
+
+dev_dependencies:
+  flutter_launcher_icons: ^0.13.1
+  flutter_lints: ^4.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon/appicon.png"
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
